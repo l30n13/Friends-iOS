@@ -12,6 +12,7 @@
 		35A9256D280B243A007826C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A9256B280B243A007826C7 /* Main.storyboard */; };
 		35A9256F280B2441007826C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A9256E280B2441007826C7 /* Assets.xcassets */; };
 		35A92572280B2441007826C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A92570280B2441007826C7 /* LaunchScreen.storyboard */; };
+		35A9257B280B24B0007826C7 /* NetowrkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9257A280B24B0007826C7 /* NetowrkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		35A9256E280B2441007826C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35A92571280B2441007826C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A92573280B2441007826C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A9257A280B24B0007826C7 /* NetowrkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetowrkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		35A92564280B243A007826C7 /* friends */ = {
 			isa = PBXGroup;
 			children = (
+				35A92579280B2499007826C7 /* routes */,
 				35A92565280B243A007826C7 /* AppDelegate.swift */,
 				35A92569280B243A007826C7 /* ViewController.swift */,
 				35A9256B280B243A007826C7 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				35A92573280B2441007826C7 /* Info.plist */,
 			);
 			path = friends;
+			sourceTree = "<group>";
+		};
+		35A92579280B2499007826C7 /* routes */ = {
+			isa = PBXGroup;
+			children = (
+				35A9257A280B24B0007826C7 /* NetowrkManager.swift */,
+			);
+			path = routes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A9256A280B243A007826C7 /* ViewController.swift in Sources */,
+				35A9257B280B24B0007826C7 /* NetowrkManager.swift in Sources */,
 				35A92566280B243A007826C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
