@@ -17,6 +17,9 @@
 		35A92572280B2441007826C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A92570280B2441007826C7 /* LaunchScreen.storyboard */; };
 		35A9257B280B24B0007826C7 /* NetowrkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9257A280B24B0007826C7 /* NetowrkManager.swift */; };
 		35CB98FB280C4DCA00CF1593 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB98FA280C4DCA00CF1593 /* CollectionViewCell.swift */; };
+		35FCFFD1280C540D00DC0522 /* FriendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FCFFD0280C540D00DC0522 /* FriendDetailsViewController.swift */; };
+		35FCFFD3280C541E00DC0522 /* FriendDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FCFFD2280C541E00DC0522 /* FriendDetails.storyboard */; };
+		35FCFFD5280C5C0E00DC0522 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FCFFD4280C5C0E00DC0522 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		35A92573280B2441007826C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A9257A280B24B0007826C7 /* NetowrkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetowrkManager.swift; sourceTree = "<group>"; };
 		35CB98FA280C4DCA00CF1593 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		35FCFFD0280C540D00DC0522 /* FriendDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailsViewController.swift; sourceTree = "<group>"; };
+		35FCFFD2280C541E00DC0522 /* FriendDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetails.storyboard; sourceTree = "<group>"; };
+		35FCFFD4280C5C0E00DC0522 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				3535E12F280BF83F007666D6 /* FriendList */,
+				35FCFFCC280C53C600DC0522 /* FriendDetails */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -82,6 +89,7 @@
 		35A7AB0D280C07AC00D79479 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				35FCFFD4280C5C0E00DC0522 /* BaseViewController.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -133,6 +141,39 @@
 				35CB98FA280C4DCA00CF1593 /* CollectionViewCell.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		35FCFFCC280C53C600DC0522 /* FriendDetails */ = {
+			isa = PBXGroup;
+			children = (
+				35FCFFCD280C53D900DC0522 /* view */,
+				35FCFFCE280C53DF00DC0522 /* model */,
+				35FCFFCF280C53E400DC0522 /* view_model */,
+			);
+			path = FriendDetails;
+			sourceTree = "<group>";
+		};
+		35FCFFCD280C53D900DC0522 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				35FCFFD0280C540D00DC0522 /* FriendDetailsViewController.swift */,
+				35FCFFD2280C541E00DC0522 /* FriendDetails.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		35FCFFCE280C53DF00DC0522 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		35FCFFCF280C53E400DC0522 /* view_model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view_model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A92572280B2441007826C7 /* LaunchScreen.storyboard in Resources */,
+				35FCFFD3280C541E00DC0522 /* FriendDetails.storyboard in Resources */,
 				3535E131280BF89B007666D6 /* FriendList.storyboard in Resources */,
 				35A9256F280B2441007826C7 /* Assets.xcassets in Resources */,
 			);
@@ -210,6 +252,8 @@
 				3535E12E280BF823007666D6 /* FriendListCollectionViewCell.swift in Sources */,
 				3535E12C280BF531007666D6 /* FriendListVM.swift in Sources */,
 				35CB98FB280C4DCA00CF1593 /* CollectionViewCell.swift in Sources */,
+				35FCFFD1280C540D00DC0522 /* FriendDetailsViewController.swift in Sources */,
+				35FCFFD5280C5C0E00DC0522 /* BaseViewController.swift in Sources */,
 				3535E12A280BF443007666D6 /* FriendListViewController.swift in Sources */,
 				35A9257B280B24B0007826C7 /* NetowrkManager.swift in Sources */,
 				35A92566280B243A007826C7 /* AppDelegate.swift in Sources */,

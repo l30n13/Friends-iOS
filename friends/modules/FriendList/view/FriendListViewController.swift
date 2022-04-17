@@ -8,7 +8,7 @@
 import UIKit
 
 
-class FriendListViewController: UIViewController {
+class FriendListViewController: BaseViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var friendsCollectionView: UICollectionView!
     
@@ -17,11 +17,7 @@ class FriendListViewController: UIViewController {
     
     var collectionViewFlowLayout = UICollectionViewFlowLayout()
     
-    override func viewDidLoad() {
-        setupView()
-    }
-    
-    private func setupView() {
+    override func setupView() {
         friendsCollectionView.isHidden = true
         friendsCollectionView.dataSource = self
         friendsCollectionView.delegate = self
@@ -86,6 +82,9 @@ extension FriendListViewController: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegate
 extension FriendListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if let vc = UIStoryboard(name: "FriendDetails", bundle: nil).instantiateViewController(withIdentifier: "FriendDetailsViewController") as? FriendDetailsViewController {
+            vc.friendData = friendsList?[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

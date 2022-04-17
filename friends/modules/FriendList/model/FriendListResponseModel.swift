@@ -75,12 +75,14 @@ class NameModel : Codable {
 }
 
 class LocationModel : Codable {
+    let street: StreetModel?
     let city : String?
     let state : String?
     let country : String?
     let postCode : Int?
     
     enum CodingKeys: String, CodingKey {
+        case street = "street"
         case city = "city"
         case state = "state"
         case country = "country"
@@ -89,6 +91,7 @@ class LocationModel : Codable {
 
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        street = try values.decodeIfPresent(StreetModel.self, forKey: .street)
         city = try values.decodeIfPresent(String.self, forKey: .city)
         state = try values.decodeIfPresent(String.self, forKey: .state)
         country = try values.decodeIfPresent(String.self, forKey: .country)
@@ -96,6 +99,21 @@ class LocationModel : Codable {
     }
 }
 
+class StreetModel : Codable {
+    let number: Int?
+    let name : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case number = "number"
+        case name = "name"
+    }
+
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        number = try values.decodeIfPresent(Int.self, forKey: .number)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+    }
+}
 
 class PictureModel : Codable {
     let large : String?

@@ -17,7 +17,7 @@ class FriendListVM {
     var friendsList: [ResultsModel] = []
     
     func fetchMyFriends(completion: @escaping(([ResultsModel]) -> Void)) {
-        for _ in 0...50 {
+        for _ in 0...100 {
             dispatchGroup.enter()
             NetworkManger.shared.getDataFromApi(for: "https://randomuser.me/api/", of: .GET) { [weak self] (response) in
                 do {
