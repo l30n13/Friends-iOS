@@ -39,6 +39,7 @@ final class NetworkManger {
         }
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData)
+        request.timeoutInterval = 300
         if let params = params {
             request.httpBody = params
         }
