@@ -16,7 +16,6 @@
 		35A9256F280B2441007826C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A9256E280B2441007826C7 /* Assets.xcassets */; };
 		35A92572280B2441007826C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A92570280B2441007826C7 /* LaunchScreen.storyboard */; };
 		35A9257B280B24B0007826C7 /* NetowrkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9257A280B24B0007826C7 /* NetowrkManager.swift */; };
-		35CB98FB280C4DCA00CF1593 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CB98FA280C4DCA00CF1593 /* CollectionViewCell.swift */; };
 		35FCFFD1280C540D00DC0522 /* FriendDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FCFFD0280C540D00DC0522 /* FriendDetailsViewController.swift */; };
 		35FCFFD3280C541E00DC0522 /* FriendDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FCFFD2280C541E00DC0522 /* FriendDetails.storyboard */; };
 		35FCFFD5280C5C0E00DC0522 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FCFFD4280C5C0E00DC0522 /* BaseViewController.swift */; };
@@ -34,7 +33,6 @@
 		35A92571280B2441007826C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35A92573280B2441007826C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A9257A280B24B0007826C7 /* NetowrkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetowrkManager.swift; sourceTree = "<group>"; };
-		35CB98FA280C4DCA00CF1593 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		35FCFFD0280C540D00DC0522 /* FriendDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailsViewController.swift; sourceTree = "<group>"; };
 		35FCFFD2280C541E00DC0522 /* FriendDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendDetails.storyboard; sourceTree = "<group>"; };
 		35FCFFD4280C5C0E00DC0522 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 				3535E129280BF443007666D6 /* FriendListViewController.swift */,
 				3535E12D280BF823007666D6 /* FriendListCollectionViewCell.swift */,
 				3535E130280BF89B007666D6 /* FriendList.storyboard */,
-				35CB98FA280C4DCA00CF1593 /* CollectionViewCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -251,7 +248,6 @@
 				35A7AB0C280BFB7000D79479 /* FriendListResponseModel.swift in Sources */,
 				3535E12E280BF823007666D6 /* FriendListCollectionViewCell.swift in Sources */,
 				3535E12C280BF531007666D6 /* FriendListVM.swift in Sources */,
-				35CB98FB280C4DCA00CF1593 /* CollectionViewCell.swift in Sources */,
 				35FCFFD1280C540D00DC0522 /* FriendDetailsViewController.swift in Sources */,
 				35FCFFD5280C5C0E00DC0522 /* BaseViewController.swift in Sources */,
 				3535E12A280BF443007666D6 /* FriendListViewController.swift in Sources */,
