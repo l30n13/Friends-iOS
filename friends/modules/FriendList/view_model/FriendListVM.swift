@@ -17,7 +17,7 @@ class FriendListVM {
     var friendsList: [ResultsModel] = []
     
     func fetchMyFriends(completion: @escaping(([ResultsModel]) -> Void)) {
-        for _ in 0...100 {
+        for _ in 0...300 {
             dispatchGroup.enter()
             NetworkManger.shared.getDataFromApi(for: "https://randomuser.me/api/", of: .GET) { [weak self] (response) in
                 do {
@@ -54,6 +54,7 @@ class FriendListVM {
         dispatchGroup.notify(queue: .global()) { [weak self] in
             if let list = self?.friendsList.prefix(10) {
                 self?.numberOfItemsInSection = list.count
+                self?.friendsList = Array(list)
                 completion(Array(list))
             }
             
