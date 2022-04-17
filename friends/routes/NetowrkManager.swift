@@ -22,7 +22,7 @@ final class NetworkManger {
      - parameter params: Pass the parameter to get the valid response data in `Data` format.
      - parameter header: Specify any headers if needed in [String : String] format.
      - parameter onSuccess: This is a `@escaping closure` for getting success response.
-     - parameter onFailure: This is a`@escaping closure` for getting failure response.
+     - parameter onFailure: This is a `@escaping closure` for getting failure response.
      - returns: This method does not have any return statement.
      */
     func getDataFromApi(for url: String,
