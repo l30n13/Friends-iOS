@@ -15,6 +15,8 @@ class FriendListViewController: UIViewController {
     let viewModel = FriendListVM()
     var friendsList: [ResultsModel]?
     
+    var collectionViewFlowLayout = UICollectionViewFlowLayout()
+    
     override func viewDidLoad() {
         setupView()
     }
@@ -23,8 +25,28 @@ class FriendListViewController: UIViewController {
         friendsCollectionView.isHidden = true
         friendsCollectionView.dataSource = self
         friendsCollectionView.delegate = self
-        
+        friendsCollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
         fetchFriends()
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        updateCollectionViewItemSize()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        coordinator.animate { [weak self] _ in
+            self?.updateCollectionViewItemSize()
+        }
+        super.viewWillTransition(to: size, with: coordinator)
+    }
+    
+    private func updateCollectionViewItemSize() {
+        let width = friendsCollectionView.frame.width / 2 - 3
+        collectionViewFlowLayout.itemSize = CGSize(width: width, height: width)
+        collectionViewFlowLayout.minimumLineSpacing = 5
+        collectionViewFlowLayout.minimumInteritemSpacing = 5
+        collectionViewFlowLayout.sectionInset = .zero
     }
 }
 
@@ -39,7 +61,7 @@ extension FriendListViewController {
                     self?.friendsCollectionView.isHidden = false
                 }
             }
-        }   
+        }
     }
 }
 
@@ -67,16 +89,3 @@ extension FriendListViewController: UICollectionViewDelegate {
         
     }
 }
-
-//MARK: UICollectionViewDelegateFlowLayout
-extension FriendListViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width / 2 - 3
-        return CGSize(width: width, height: width)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-    }
-}
-
