@@ -7,14 +7,14 @@
 
 import Foundation
 
-class FriendListResponseModel : Decodable {
+struct FriendListResponseModel : Decodable {
     let results : [ResultsModel]?
-
+    
     enum CodingKeys: String, CodingKey {
         case results = "results"
     }
-
-    required init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
         let values   = try decoder.container(keyedBy: CodingKeys.self)
         results      = try values.decodeIfPresent([ResultsModel].self, forKey: .results)
     }
@@ -24,7 +24,7 @@ class FriendListResponseModel : Decodable {
     }
 }
 
-class ResultsModel : Codable {
+struct ResultsModel : Codable {
     let gender : String?
     let name : NameModel?
     let location : LocationModel?
@@ -32,7 +32,7 @@ class ResultsModel : Codable {
     let phone : String?
     let cell : String?
     let picture : PictureModel?
-
+    
     enum CodingKeys: String, CodingKey {
         case gender     = "gender"
         case name       = "name"
@@ -42,8 +42,8 @@ class ResultsModel : Codable {
         case cell       = "cell"
         case picture    = "picture"
     }
-
-    required init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
         let values      = try decoder.container(keyedBy: CodingKeys.self)
         gender          = try values.decodeIfPresent(String.self, forKey: .gender)
         name            = try values.decodeIfPresent(NameModel.self, forKey: .name)
@@ -55,18 +55,18 @@ class ResultsModel : Codable {
     }
 }
 
-class NameModel : Codable {
+struct NameModel : Codable {
     let title : String?
     let first : String?
     let last : String?
-
+    
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case first = "first"
         case last = "last"
     }
-
-    required init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         title = try values.decodeIfPresent(String.self, forKey: .title)
         first = try values.decodeIfPresent(String.self, forKey: .first)
@@ -74,7 +74,7 @@ class NameModel : Codable {
     }
 }
 
-class LocationModel : Codable {
+struct LocationModel : Codable {
     let street: StreetModel?
     let city : String?
     let state : String?
@@ -88,8 +88,8 @@ class LocationModel : Codable {
         case country = "country"
         case postCode = "postcode"
     }
-
-    required init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         street = try values.decodeIfPresent(StreetModel.self, forKey: .street)
         city = try values.decodeIfPresent(String.self, forKey: .city)
@@ -99,7 +99,7 @@ class LocationModel : Codable {
     }
 }
 
-class StreetModel : Codable {
+struct StreetModel : Codable {
     let number: Int?
     let name : String?
     
@@ -107,26 +107,26 @@ class StreetModel : Codable {
         case number = "number"
         case name = "name"
     }
-
-    required init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         number = try values.decodeIfPresent(Int.self, forKey: .number)
         name = try values.decodeIfPresent(String.self, forKey: .name)
     }
 }
 
-class PictureModel : Codable {
+struct PictureModel : Codable {
     let large : String?
     let medium : String?
     let thumbnail : String?
-
+    
     enum CodingKeys: String, CodingKey {
         case large = "large"
         case medium = "medium"
         case thumbnail = "thumbnail"
     }
-
-    required init(from decoder: Decoder) throws {
+    
+    init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         large = try values.decodeIfPresent(String.self, forKey: .large)
         medium = try values.decodeIfPresent(String.self, forKey: .medium)
