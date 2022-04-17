@@ -82,7 +82,7 @@ final class NetworkManger {
         DispatchQueue.global().async {
             guard let imageData = try? Data(contentsOf: imageURL) else {
                 DispatchQueue.main.async {
-                    imageView.image = UIImage(named: "DefaultHumanFaceImage")
+                    imageView.image = UIImage(named: "DefaultHumanFaceImage") //loading default image incase of there is no image loaded
                 }
                 return
             }
