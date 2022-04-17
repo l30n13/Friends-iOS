@@ -29,13 +29,25 @@ class FriendListCollectionViewCell: UICollectionViewCell {
         friendAddress.text = data?.location?.country
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        drawBorderAndMakeCornerRadius()
+        super.traitCollectionDidChange(previousTraitCollection)
+    }
+    
     //For make corner radius and add shadow
     private func drawBorderAndMakeCornerRadius() {
         let layer = mainBackgroundView.layer
         layer.cornerRadius = 10
-        layer.shadowRadius = 3
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.2
+        if traitCollection.userInterfaceStyle == .dark {
+            layer.shadowRadius = 4
+            layer.shadowColor = UIColor.white.cgColor
+            layer.shadowOpacity = 0.4
+        } else {
+            layer.shadowRadius = 3
+            layer.shadowColor = UIColor.black.cgColor
+            layer.shadowOpacity = 0.2
+        }
+        
         layer.shadowOffset = CGSize(width: 1, height: 1)
     }
 }
